@@ -1,0 +1,53 @@
+*************grade of a student**************
+marks=int(input("Enter the marks of a Student: "))
+if(marks>=91 and marks<=100):
+    print("A1 grade")
+elif(marks>=81 and marks<=90):
+    print("A2 grade")
+elif(marks>=71 and marks<=80):
+    print("B1 grade")
+elif(marks>=61 and marks<=70):
+    print("B2 grade")
+elif(marks>=51 and marks<=60):
+    print("C1 grade")
+elif(marks>=41 and marks<=50):
+    print("C2 grade")
+elif(marks>=33 and marks<=40):
+    print("D grade")
+else:
+    print("Candidate Fail")
+    
+**************leap year or not******************
+year=int(input("Enter the year: "))
+if(year%4==0):
+    if(year%100==0):
+        if(year%400==0):
+            print("leap year")
+        else:
+            print("not a leap year")
+    else:
+        print("leap year")
+else:
+    print("not a leap year")
+*****************zero or even or odd***************
+num=int(input("Enter a number: "))
+if(num==0):
+    print("zero")
+elif(num%2==0):
+    print("even")
+else:
+    print("odd")
+****************calculator*********************88
+a=int(input("Enter a number: "))
+b=int(input("Enter another number: "))
+s=input("Enter the symbol: ")
+if(s=='+'):
+    print(a+b)
+elif(s=='-'):
+    print(a-b)
+elif(s=='*'):
+    print(a*b)
+elif(s=='/'):
+    print(a/b)
+elif(s=='//'):
+    print(a//b)
