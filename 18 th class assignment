@@ -1,5 +1,46 @@
 1. write a program to print the grade of a student based on the marks obtained. 
+marks=int(input("Enter the total marks obtained for a student"))
+if(marks>=90):
+  print("A Grade")
+elif (marks>=80):
+  print("B Grade")
+elif (marks>=70):
+  print("C Grade")
+elif(marks>=60):
+  print("D Grade")
+else:
+  print("E Grade")
 2. Write a program to print if the guven year is leap or not.
+year =int(input("Enter a year"))
+if((year%4==0  and year%100!=0)or(year%400==0)):
+  print("leap year")
+else:
+  print("Not leap year")
 3. Write a program to print if the given number is zero or odd or even.
+num=int(input("Enter a number"))
+if(num==0):
+  print("Zero")
+elif(num%2==0):
+  print("even")
+else:
+  print("odd")
 4. Write a program to check the strength of a password.(please provide different rules for the password)
-5.Write a program to create a calculator that perform basic arithematic operations.
+pwd=input()
+length=0
+for i in pwd:
+  length=length+1
+if(length>=7):
+  if(('$' in pwd or '@' in pwd or '#' in pwd) and ('1' in pwd or '2' in pwd or '3' in pwd or '4' in pwd or '5' in pwd or '6' in pwd or '7' in pwd or '8' in pwd or '9' in pwd )):
+    print("password is secure")
+  else:
+    print("password is insecure")
+else:
+  print("password is insecure")
+ 5.Write a program to create a calculator that perform basic arithematic operations.
+ a=int(input("Enter a number"))
+ b=int(input("Enter a number"))
+ print(a+b)
+ print(a-b)
+ print(a*b)
+ print(a/b)
+ print(a%b)
