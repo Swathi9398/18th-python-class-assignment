@@ -3,3 +3,97 @@
 3. Write a program to print if the given number is zero or odd or even.
 4. Write a program to check the strength of a password.(please provide different rules for the password)
 5.Write a program to create a calculator that perform basic arithematic operations.
+
+program to print grade of a student:
+#include<stdio.h>
+void main()
+{
+int a,b,c,main;
+printf("Enter a,b and c marks: ");
+scanf("%d%d%d",&a,&b,&c);
+mean=(a+b+c)/3;
+if(mean>90)
+printf("A grade");
+else if(mean>80&&mean<90)
+printf("B grade");
+else if(mean>70&&mean<80)
+printf("C grade");
+else if(mean>60&&mean<70)
+printf("D grade");
+else if(mean>60&&mean<70)
+printf("D grade");
+else if(mean>50&&mean<60)
+printf("E grade");
+else(mean>40&&mean<50)
+printf("Fail grade");
+}
+
+program to print leap year or not:
+#include<stdio.h>
+void main()
+{
+int a;
+printf("Enter a: ");
+scanf("%d",&a);
+if(a%400==0)
+printf("leap year");
+else if(a%100==0)
+printf(" not leap year");
+else(a%4==0)
+printf("leap year");
+}
+
+program to print odd or even or zero:
+
+#include<stdio.h>
+void main()
+{
+int a;
+printf("Enter a: ");
+scanf("%d",&a);
+if(a==0)
+printf("given num is zero");
+else if(a%2==0)
+printf("even");
+else
+printf("odd");
+}
+
+program to check password strength:
+#include<stdio.h>
+void main()
+{
+int i=0;
+char string[100];
+printf("please enter password\n");
+gets(string);
+if(strlen(string)<6)
+printf("password is too short");
+if(islower(string[i]&&isupper(string[i]&&isdigit(string[i]))
+printf("strong password");
+else
+printf("weak password");
+}
+program to print basic arithmetic operations:
+#include<stdio.h>
+void main()
+{
+char symbols;
+double a1,a2;
+printf("Enter symbol :");
+scanf("%c",&symbols);
+printf("Enter two values :");
+scanf("%lf %lf",&a1,&a2);
+switch(symbols)
+{
+case '+':printf("%.1lf+%.1lf=%.1lf",a1,a2);
+          break;
+case '-':printf("%.1lf-%.1lf=%.1lf",a1,a2);
+          break;
+case '+':printf("%.1lf*%.1lf=%.1lf",a1,a2);
+          break;
+case '/':printf("%.1lf/%.1lf=%.1lf",a1,a2);
+          break;
+default:printf("please enter correct symbol");
+}
+}
