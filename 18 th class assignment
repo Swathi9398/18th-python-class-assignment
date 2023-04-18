@@ -1,5 +1,77 @@
 1. write a program to print the grade of a student based on the marks obtained. 
+marks=int(input("enter marks:"))
+if(marks>=90 and marks<=100):
+   print("Grade A")
+elif(marks>=75 and marks<90):
+   print("Grade B")
+elif(marks>=60 and marks<75):
+   print("Grade C")
+elif(marks>=35 and marks<60):
+   print("Grade D")
+else:
+   print("fail")
+   
 2. Write a program to print if the guven year is leap or not.
+year=int(input("enter year:"))
+if(year%4==0):
+  if(year%100==0):
+     if(year%400==0):
+        print("leap year")
+     else:
+        print("not a leap year")
+   else:
+      print("leap year")
+ else:
+     print("not a leap year")
+     
 3. Write a program to print if the given number is zero or odd or even.
+num=int(input("enter number:"))
+if(num==0):
+  print("given number is zero")
+elif(num%2==0):
+  print("given number is even")
+else:
+   print("given number is odd")
+
 4. Write a program to check the strength of a password.(please provide different rules for the password)
+#password should not be less than 8 characters
+#password should contain uppercase,lowercase,number,specialsymbol
+password=input("")
+lcase=0
+ucase=0
+num=0
+symbol=0
+sy=['!','@','$','*','&','^']
+for i in range(len(password)):
+ if password[i].islower():
+  lcase=lcase+1
+ elif password[i].isupper():
+  ucase=ucase+1
+ elif password[i].isdigit():
+  num=num+1
+ else:
+  if password[i] in sy:
+    symbol=symbol+1
+if(lcase!=0 and ucase!=0 and num!=0 and symbol!=0 and len(password)>8):
+   print("strong password")
+else:
+   print("not a strong password")
+
+
 5.Write a program to create a calculator that perform basic arithematic operations.
+x=int(input("enter x value:"))
+y=int(input("enter y value:"))
+op=int(input("enter operation:"))
+if(op==1):
+  print("addition of x and y:",x+y)
+elif(op==2):
+  print("subtraction of x and y:",x-y)
+elif(op==3):
+  print("multiplication of x and y:",x*y)
+elif(op==4):
+  print("division of x and y:",x/y)
+elif(op==5):
+  print("ramainder of x and y:",x%y)
+else:
+  print("invalid input")
+
