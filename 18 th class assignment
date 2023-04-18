@@ -42,3 +42,37 @@ elif num%2 ==  0:
     print("Given numer is Even")
 else:
     print("Given numer is Odd")
+
+# 4Answer
+
+length = lower = upper = digit = special = False
+password = input("Enter password: ")
+
+if (len(password) > 4):
+    length = True
+    for char in password:
+        if char.islower():
+            lower = True
+        elif char.isupper():
+            upper = True
+        elif char.isdigit():
+            digit = True
+if length and lower and upper and digit:
+    print("Valid Password")
+else:
+    print("Invalid Password")
+
+# 5Aswer
+
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+operation = input("chose + or - or * or /:   ")
+if operation == '+':
+    print(num1+num2)
+elif operation == '-':
+    print(num1 - num2)
+elif operation == '*':
+    print(num1*num2)
+elif operation == '/':
+    print(num1 / num2)
