@@ -3,3 +3,61 @@
 3. Write a program to print if the given number is zero or odd or even.
 4. Write a program to check the strength of a password.(please provide different rules for the password)
 5.Write a program to create a calculator that perform basic arithematic operations.
+
+
+
+1. write a program to print the grade of a student based on the marks obtained. 
+
+
+
+sub1=int(input("Enter marks of the first subject: "))
+sub2=int(input("Enter marks of the second subject: "))
+sub3=int(input("Enter marks of the third subject: "))
+sub4=int(input("Enter marks of the fourth subject: "))
+sub5=int(input("Enter marks of the fifth subject: "))
+avg=(sub1+sub2+sub3+sub4+sub4)/5
+if(avg>=90):
+    print("Grade: A")
+elif(avg>=80 and avg<90):
+    print("Grade: B")
+elif(avg>=70 and avg<80):
+    print("Grade: C")
+elif(avg>=60 and avg<70):
+    print("Grade: D")
+else:
+    print("Grade:F")
+    
+   
+2. Write a program to print if the guven year is leap or not.
+   
+   
+year=int(input("Enter year to be checked:"))
+if(year%4==0 and year%100!=0 or year%400==0):
+    print("The year is a leap year!")
+else:
+    print("The year isn't a leap year!")
+    
+    
+    
+    3. Write a program to print if the given number is zero or odd or even.
+    
+    
+    n=int(input("enter the value"))
+    if n==0:
+      print("given number is zero")
+    elif n%2==0:
+      print("given number is even")
+    else:
+      print("given number is odd")
+      
+      
+      5.Write a program to create a calculator that perform basic arithematic operations.
+      
+      
+      a=int(input("enter the  first value"))
+      b=int(input("enter the second value"))
+      print("a+b=",a+b)
+      print("a-b=",a-b)
+      print("a*b=",a*b)
+      print("a/b=",a/b)
+      print("a**b=",a**b)
