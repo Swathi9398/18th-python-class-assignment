@@ -1,5 +1,86 @@
 1. write a program to print the grade of a student based on the marks obtained. 
+
+marks=int(input(""))
+if marks>90 and marks<=100:
+  print("Grade=A")
+elif marks>80 and marks<=90:
+  print("Grade=B")
+elif marks>70 and marks<=80:
+  print("Grade=C")
+elif marks>60 and marks<=70:
+  print("Grade=D")
+elif marks>=50 and marks<=60:
+  print("Grade=E")
+elif marks<50:
+  print("Grade=F")
+  
+  -----------------------------------------------------------
 2. Write a program to print if the guven year is leap or not.
+
+year=int(input(""))
+if year%4==0:
+  if year%100!=0:
+    if year%400==0:
+      print("Leap year")
+    else:
+      print("Not a leap year")
+  else:
+    print("Leap year")
+else:
+  print("Not a leap year")
+  
+------------------------------------------------------------------
 3. Write a program to print if the given number is zero or odd or even.
+
+num=int(input(""))
+if num==0:
+  print("Zero")
+elif num%2==0:
+  print("Even")
+else:
+  print("Odd")
+  
+--------------------------------------------------------------------------
 4. Write a program to check the strength of a password.(please provide different rules for the password)
+
+print("Password should not be less than 8 characters")
+print("Should contain upper, lower, number, special symbol")
+password=input("Enter password:")
+lc=0
+uc=0
+n=0
+sc=0
+sy=['!','@','$','*''&''^']
+for i in range(len(password)):
+  if password[i].islower():
+    lc=lc+1
+  elif password[i].isupper():
+    uc=uc+1
+  elif password[i].isdigit():
+    n=n+1
+  else:
+    if password[i] in sy:
+      sc=sc+1
+if (lc!=0 and uc!=0 and n!=0 and sc!=0 and len(password)>8):
+  print("Password is strong")
+else:
+  print("Password is not strong")
+  
+  ------------------------------------------------------------------------------
 5.Write a program to create a calculator that perform basic arithematic operations.
+
+num1=int(input(""))
+num2=int(input(""))
+choice=int(input(""))
+if choice==1:
+  print("Sum:",num1+num2)
+elif choice==2:
+  print("Difference:",num1-num2)
+elif choice==3:
+  print("Multiplication:",num1*num2)
+elif choice==4:
+  print("Division:num1/num2)
+elif choice==5:
+  print("Remainder:num1%num2)
+else:
+  print("Invalid Input")
