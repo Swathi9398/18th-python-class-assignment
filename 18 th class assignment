@@ -1,5 +1,81 @@
 1. write a program to print the grade of a student based on the marks obtained. 
-2. Write a program to print if the guven year is leap or not.
+2. Write a program to print if the given year is leap or not.
 3. Write a program to print if the given number is zero or odd or even.
 4. Write a program to check the strength of a password.(please provide different rules for the password)
 5.Write a program to create a calculator that perform basic arithematic operations.
+
+
+
+
+############################################################################################################################
+1. write a program to print the grade of a student based on the marks obtained. 
+print("Enter Marks Obtained in 5 Subjects: ")
+sub1 = int(input("enter marks:"))
+sub2 = int(input("enter marks:"))
+sub3 = int(input("enter marks:"))
+sub4 = int(input("enter marks:"))
+sub5 = int(input("enter marks:"))
+tot = sub1+sub2+sub3+sub4+sub5
+avg = tot/5subjects
+if avg>=91 and avg<=100:
+    print("A Grade")
+elif avg>=81 and avg<=91:
+    print("B Grade")
+elif avg>=71 and avg<=81:
+    print("C Grade")
+elif avg>=61 and avg<=71:
+    print("D Grade")
+elif avg>=51 and avg<=61:
+    print("E Grade")
+else:
+    print("F Grade")
+......................................................................    
+2. Write a program to print if the given year is leap or not.   
+   a=int(input(Enter the year:"))
+      if(a%400==0 or(a%4==0 and a%100!=0)):
+        print("leap year:")
+      else:
+        print("not a leap year:")
+.........................................................................
+3. Write a program to print if the given number is zero or odd or even.
+a= int(input("Enter a number:"))  
+if (a%2) == 0:  
+   print("{0} is Even number".format(a))  
+else:  
+   print("{0} is Odd number".format(a))  
+ ...............................................................................  
+4.Write a program to check the strength of a password.(please provide different rules for the password)
+  password=input("Enter the valuees")
+  lower_case=0
+  upper_case=0
+  d=0
+  for i in password:
+      if i.islower():
+          lower_case+=1
+      if i.isdigit():
+          upper_case+=1
+      if i.isdigit():
+          d+=1
+      if (lower_case>=1 and upper_case>=1 and d>=1 and len(password):
+          print("strong password")
+      else:
+          print("not strong password")
+          
+  .........................................................................................................    
+  
+5.Write a program to create a calculator that perform basic arithematic operations.
+a=int(input("enter number:")) 
+b=int(input("enter number:")) 
+c=int(input("enter your option:"))
+if(c==1):
+  print("Add",a+b)
+elif(c==2):
+  print("Sub",a-b)
+elif(c==3):
+  print("mul",a*b)
+elif(c==4):
+  print("div",a/b)
+else:
+  print("rem",a%b)
+
+  
