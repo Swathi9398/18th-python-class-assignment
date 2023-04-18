@@ -1,5 +1,117 @@
-1. write a program to print the grade of a student based on the marks obtained. 
+1. write a program to print the grade of a student based on the marks obtained.
+solution:
+  marks=int(input("Enter marks"))
+  if marks>90 and marks<=100:
+    print("A grade")
+  elif marks>80:
+    print("B grade")
+  elif marks>70:
+    print("C grade")
+  elif marks>60:
+    print("D grade")
+  elif marks>50:
+    print("E grade")
+  else:
+    print("Fail")
 2. Write a program to print if the guven year is leap or not.
+solution:
+  year=int(input("Enter year: "))
+  if ((year%4==0 and year%100!=0) or year%400==0):
+    print(year,"is a leap year")
+  else:
+    print(year,"not a leap year")
 3. Write a program to print if the given number is zero or odd or even.
+solution:
+  num=int(input("Enter number"))
+  if num==0:
+    print(num,"is zero")
+  else:
+    if num%2==0:
+      print(num,"Even number")
+    else:
+      print(num,"odd number")
+      
+ #another way by using elif
+solution:
+  num=int(input("Enter number"))
+  if num==0:
+    print(num,"is zero")
+  elif num%2==0:
+    print(num,"is even number")
+  else:
+    print(num,"is odd number")
+    
+     
 4. Write a program to check the strength of a password.(please provide different rules for the password)
+solution:
+  def checkstrength(passw):
+    le=len(passw)
+    lower=False
+    upper=False
+    digit=False
+    specialchars=False
+    normalchars="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    for i in range(le):
+      if passw[i].isLower():
+        lower=True
+      if passw[i].isUpper():
+         upper=True
+      if passw[i].isDigit():
+        digit=True
+      if passw[i] not in normalchars:
+        specialchars=True
+    if (lower and upper and digit and specialchars and le>8):
+        print("strong")
+    else:
+        print("weak")
+ password=input("Enter password")
+ checkstrength(password)
+ 
+ 
+ #we can solve it by using regular expressions
+import re
+pass=input("Enter the password:")
+if(len(pass)>=8):
+    if(bool(re.match('((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,30})',pass))==True):
+        print("The password is strong")
+    else:
+        print("You have entered an invalid password.")  
+  
 5.Write a program to create a calculator that perform basic arithematic operations.
+solution:
+def add(num1,num2):
+  return num1+num2
+def sub(num1,num2):
+  return num1-num2
+def mul(num1,num2):
+  return num1*num2
+def div(num1,num2):
+  return num/num2
+def rem(num1,num2):
+  if num1>num2:
+    return num1%num2
+  else:
+    return num1
+print("please select an option")
+print("1.addition")
+print("2.subtraction")
+print("3.multiplication")
+print("4.division")
+print("5.modulo")
+num1=int(input())
+num2=int(input())
+choice=int(input("please enter choice from above(1|2|3|4|5)"))
+if choice==1:
+  print(add(num1,num2)
+elif choice==2:
+  print(sub(num1,num2))
+elif choice==3:
+  print(mul(num1,num2))
+elif choice==4:
+  print(div(num1,num2))
+elif choice==5:
+  print(rem(num1,num2))
+else:
+  print("invalid choice")
+ 
+
