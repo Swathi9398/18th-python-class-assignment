@@ -1,0 +1,81 @@
+#grades of the student
+marks=int(input("Enter marks of the student"))
+if marks>=80:
+  print("A grade")
+elif marks>=60 and marks<80:
+  print("B grade")
+elif marks>=40 and marks<60:
+  print("C grade")
+elif marks>=35 and marks<40:
+  print("D grade")
+ else:
+  print("FAIL")
+  
+  
+  #to print given year is leap or not
+year=int(input("Enter year"))
+if year%4 == 0 and year%100 != 0:
+  print("leap year")
+elif year%4 == 0 and year%100 == 0 and year%400==0:
+  print("leap year")
+else:
+  print("not leap year")
+  
+  
+  #to print given number is zero or even odd
+n=int(input("Enter a number : "))
+if n==0:
+  print("given number is zero ")
+elif n%2 == 0:
+  print("given number is even number")
+else:
+  print("given number is odd number")
+ 
+ 
+ #to check strength of a password
+password=input("enter password")
+lowercase="abcdefghijklmnopqrstuvwxyz"
+uppercase="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+digits="0123456789"
+l=0
+u=0
+d=0
+s=0
+for i in password:
+  if i in lowercase:
+    l=1
+  if i in uppercase:
+    u=1
+   if i in digits:
+    d=1
+if "@" in password:
+  s=1
+if l==1 and u==1 and d==1 and s==1:
+  print("strong password")
+else:
+  print("weak strong")
+   
+   
+   
+#to create a calculator that performs basic arithematic operations
+a=int(input("Enter a value: "))
+b=int(input("Enter b value: "))
+choice=int(input("enter choice: "))
+print(1.Adddtion)
+print(2.substraction)
+print(3.multiplication)
+print(4.division)
+if choice == 1:
+  print("Addition is : ",a+b)
+elif choice == 2:
+  print("subtraction is: ",a-b)
+elif choice == 3:
+  print("multiplication is: ",a*b)
+elif  choice== 4:
+  print("division is: ",a/b)
+else:
+  print("Invalid choice: ")
+  
+
+  
+  
