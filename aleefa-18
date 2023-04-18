@@ -1,0 +1,49 @@
+////////////////////////
+m=int(input("enter marks: ")
+if m>80 and m<=100:
+  print("A")
+elif m>60 and m<=80:
+  print("B")
+elif m>40 and m<=60:
+  print("C")
+else:
+  print("D")
+//////////////////////////
+y=int(input("enter year:"))
+if y%400==0 or y%100!=0 or y%4==0: 
+  print("Leap year ",y)
+else:
+    print("Not a leap year ",y)
+///////////////////////////////
+num=int(input("enter marks: ")
+if num==0:
+ print("zero")
+elif num%2==0:
+ print("even")
+else:
+  print("odd")
+/////////////////////////////////
+import re;
+pwd=input("enter password: ")
+if len(pwd)>=8:
+  if re.match("[A-Z]*[a-z]*[@#$%*][0-9]*",pwd):
+    print("strongest");
+  elif re.match("[a-z]*[0-9]*",pwd):
+    print("stronger");
+else:
+  print("Invalid password")
+///////////////////////////////////
+a=int(input("enter a value: ")
+b=int(input("enter b value: ")
+ch=input("enter symbol to perform arithmetic operation: ")
+if ch=='+':
+  print(Addition is :",a+b)
+if ch=='-':
+  print(Addition is :",a-b)
+if ch=='*':
+  print(Addition is :",a*b)
+if ch=='/':
+  print(Addition is :",a/b)
+if ch=='%':
+  print(Addition is :",a%b)
+ 
