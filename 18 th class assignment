@@ -1,5 +1,113 @@
 1. write a program to print the grade of a student based on the marks obtained. 
+
+#python code
+
+telugu = int(input("Enter marks secured in Telugu : "))
+hindi = int(input("Enter marks secured in Hindi : "))
+english = int(input("Enter marks secured in English : "))
+mathematics = int(input("Enter marks secured in Mathematics : "))
+science = int(input("Enter marks secured in Science : "))
+social = int(input("Enter marks secured in Social : "))
+total_marks = telugu + hindi + english + mathematics + science + social
+average = total_marks / 6
+if(average > 90):
+    print("Overall Grade : A")
+elif(average > 80 and average <= 90):
+    print("Overall Grade : B")
+elif(average > 70 and average <= 80):
+    print("Overall Grade : C")
+elif(average > 60 and average <= 70):
+    print("Overall Grade : D")
+elif(average > 50 and average <= 60):
+    print("Overall Grade : E")
+elif(average >= 40 and average <= 50):
+    print("Overall Grade : F")
+else:
+    print("Fail")
+ 
 2. Write a program to print if the guven year is leap or not.
+
+#python code
+
+year = int(input("Enter year : "))
+if(year % 4 == 0):
+    if(year % 100 == 0):
+        if(year % 400 == 0):
+            print("Leap year")
+        else:
+            print("Not Leap year")
+    else:
+        print("Leap year")
+else:
+    print("Not Leap year")
+    
 3. Write a program to print if the given number is zero or odd or even.
+
+#python code
+
+number = int(input("Enter a number : "))
+if(number == 0):
+    print("The Number is Zero")
+elif(number % 2 == 0):
+    print("The Number is Even Number")
+else:
+    print("The Number is Odd Number")
+    
 4. Write a program to check the strength of a password.(please provide different rules for the password)
+
+#python
+
+print("The rules for setting the password are")
+print("1.The minimum length of password should be 5(included) characters")
+print("2.The maximun length of password should be 12(included) characters")
+print("3.The password can consists of lowercase and uppercase letters,digits and special symbols(@,$)")
+password = input("Enter Password : ")
+lower_count, upper_count, num_count,special_count = 0,0,0,0
+if(len(password) >= 5 and len(password) <= 12):
+    for i in password:
+        if(i == '@' or i == '$'):
+            special_count = 1
+        elif(i == '0' or i == '1' or i == '2' or i == '3' or i == '4' or i == '5' or i == '6' or i == '7' or i == '8' or i == '9'):
+            num_count = 1
+        elif(i >= 'A' and i <= 'Z'):
+            upper_count = 1
+        elif(i >= 'a' and i <= 'z'):
+            lower_count = 1
+total_count = num_count + special_count + lower_count + upper_count
+if(total_count == 0):
+    print("The password should contain minimum 5 characters and maximum 12 characters")
+elif(total_count == 1):
+    print("The password is very weak")
+elif(total_count == 2):
+    print("The password is weak")
+elif(total_count == 3):
+    print("The password is strong")
+elif(total_count == 4):
+    print("The password is very strong")
+ 
 5.Write a program to create a calculator that perform basic arithematic operations.
+
+#python
+
+number1 = int(input("Enter First Number : "))
+number2 = int(input("Enter Second Number : "))
+print("Enter operation to be performed on Numbers")
+print("1.Addition")
+print("2.Subtraction")
+print("3.Multiplication")
+print("4.Division")
+print("5.Modulo")
+choice = int(input("Enter your choice : "))
+if(choice == 1):
+    print("The sum is ", number1 + number2)
+elif(choice == 2):        
+    print("The difference is : ", number1 - number2)
+elif(choice == 3):
+    print("The product is : ", number1 * number2)
+elif(choice == 4):
+    print("The quotient is ", number1 / number2)
+elif(choice == 5):    
+    print("The remainder is : ", number1 % number2)
+else:            
+    print("Invalid choice")
+    print("Enter valid choice")
