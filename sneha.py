@@ -2,7 +2,7 @@
 2. Write a program to print if the guven year is leap or not.
 3. Write a program to print if the given number is zero or odd or even.
 4. Write a program to check the strength of a password.(please provide different rules for the password)
-5.Write a program to create a calculator that perform basic arithematic operations.#
+5.Write a program to create a calculator that perform basic arithematic operations.
 #write a program to print the grade of a student based on the marks obtained.
 marks = int(input("Enter marks of a student : "))
 if(marks > 90 and marks <= 100):
