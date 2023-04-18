@@ -1,0 +1,84 @@
+1Q----
+marks=int(input('Enter marks out of 100'))
+if(marks >90 and marks<=100):
+  print('grade is A+')
+elif (marks>80 and marks<=90):
+  print('grade is A')
+elif (marks>70 and marks<=80):
+  print('grade is B+')
+elif(marks>60 and marks<=70):
+  print('grade is B')
+elif(marks>50 and marks<=60):
+  print('grade is C+')
+elif(marks>40 and marks<=50):
+  print('grade is C')
+else:
+  print('grade is D')
+  
+  
+  
+  2Q----
+  year int(input('Enter a Year'))
+  if year%4==0:
+    if year%100==0:
+      if year%400==0:
+        print('It is a leap year')
+      else:
+        print('Not a leap Year')
+    else:
+      print('It is a leap year')
+  else:
+    print('Not a leap year')
+    
+    
+    
+    3Q----
+    num=int(input('Enter a number'))
+    if num==0:
+      print('Zero')
+    elif num%2==0:
+      print('Even')
+    else:
+      print('Odd')
+      
+      
+      
+      4Q-----
+     l=u=d=s=0
+     paswrd=input('Enter a password')
+      #rules for the password
+      #It should be minimum of 8 characters
+      # it should contain a alphabet,numeric and a special character
+     if len(paswrd)>=8:
+        for i in paswrd:
+          if i.isupper():
+            +u=1
+          elif i.islower()
+            l+=1
+          elif i.isdigit():
+            d+=1
+          elif (i=='@' or i=='$' or i=='_'):
+            s+=1
+          else:
+            print(f'{i} is a Invalid character')
+       if(u>=1 and l>=1 and d>=1 and s>=1 and l+u+d+s==len(paswrd)):
+          print('Valid Password')
+       else:
+          print('Invalid Password')
+    else:
+      print('Invalid Password')
+    
+    
+    
+    
+    
+    5Q-----
+    a=int(input('enter a num')
+    b=int(input('enter a num')
+    print(a+b)
+    print(a-b)
+    print(a*b)
+    print(a/b)
+    print(a//b)
+    print(a%b)
+    print(a**b)
