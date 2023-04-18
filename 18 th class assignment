@@ -3,3 +3,64 @@
 3. Write a program to print if the given number is zero or odd or even.
 4. Write a program to check the strength of a password.(please provide different rules for the password)
 5.Write a program to create a calculator that perform basic arithematic operations.
+#1. write a program to print the grade of a student based on the marks obtained
+marks=int(input("Enter obtained marks:"))
+if(marks>100):
+  print("Invalid marks")
+elif marks>=80:
+  print("First Class")
+elif marks<80 and marks>=60:
+  print("Second Class")
+elif marks<60 and marks>=30:
+  print("Third Class")
+else:
+  print("Fail")
+#2. Write a program to print if the guven year is leap or not.
+year=int(input("Enter a year: "))
+if (year%4==0 and (year%100!=0 or year%400==0)):
+  print("%d is a leap year"%year)
+else:
+  print("%d is not a leap year"%year)
+#3. Write a program to print if the given number is zero or odd or even.
+num=int(input("Enter a number: "))
+if(num==0):
+    print("Number is a Zero")
+else:
+    if(num%2==0):
+        print("%d is an Even Number"%num)
+    else:
+        print("%d is an odd Number"%num)
+ #4. Write a program to check the strength of a password.(please provide different rules for the password)
+print("Password should contain atleat one capital letter")
+print("Password should contain atleat one special character(@ or # or $)")
+print("Password should contain atleat one number")
+print("Password should contain minimum 10 characters")
+count=count1=count2=count3=0
+password=input("Enter a password:")
+if(len(password)>=10):
+    count+=1
+    for i in password:
+        if ord(i)>=65 and ord(i)<=90:
+            count1+=1
+        if i=='@' or i=='#' or i=='$':
+            count2+=1
+        if ord(i)>=48 and ord(i)<=57:
+            count3+=1
+if(count!=0 and count1!=0 and count2!=0 and count3!=0):
+    print("Strong Password")
+else:
+    print("Weak Password")
+#5.Write a program to create a calculator that perform basic arithematic operations.
+num1=int(input("Enter first Number: "))
+num2=int(input("Enter second Number: "))
+symbol=input("Enter operator: ")
+if(symbol=='+'):
+    print("Addition:",num1+num2)
+elif symbol=='-':
+    print("Subtraction:",num1-num2)
+elif symbol=='*':
+    print("Multiplication:",num1*num2)
+elif symbol=='/':
+    print("Division:",num1/num2)
+else:
+    print("Modulo:",num1%num2)
