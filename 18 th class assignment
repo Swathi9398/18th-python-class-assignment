@@ -31,6 +31,7 @@ else:
     print("Not leap year")
 -------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------
+3.
 a=int(input("Enter Number:"))
 if a==0:
     print("Zero")
@@ -39,3 +40,21 @@ else:
         print("Even Number")
     else:
         print("Odd Number")
+--------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------
+4.
+length = lower= upper=digit =False
+password = input("Enter password")
+if len(password)>=8:
+    length=True
+    for letter in password:
+        if letter.islower():
+            lower=True
+        elif letter.isupper():
+            upper=True
+        elif letter.isdigit():
+            digit=True
+if length and lower and upper and digit:
+    print("Valid Password")
+else:
+    print("Not Valid")
