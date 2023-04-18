@@ -1,5 +1,64 @@
 1. write a program to print the grade of a student based on the marks obtained. 
-2. Write a program to print if the guven year is leap or not.
+2. Write a program to print if the given year is leap or not.
 3. Write a program to print if the given number is zero or odd or even.
 4. Write a program to check the strength of a password.(please provide different rules for the password)
 5.Write a program to create a calculator that perform basic arithematic operations.
+
+
+
+1. write a program to print the grade of a student based on the marks obtained.
+marks=int(input("Enter the marks obtained:"))
+if(marks==90 and marks<=100):
+  print("A+")
+elif(marks>=85 and marks<=89):
+  print("A")
+elif(marks>=75 and marks <=84):
+  print("B+")
+elif(marks>=65 and marks<=74):
+  print("B")
+elif("marks>=55 and marks<=64"):
+  print("C+")
+elif("marks>=45 and marks<=54"):
+  print("C")
+else:
+  print("D")
+  
+2. Write a program to print if the given year is leap or not.
+leap_year=int(input("Enter the year:"))
+if(leap_year%==4 or leap_year%400==0):
+  print("this is the leap year")
+else:
+  print("This is not the leap year")
+
+3. Write a program to print if the given number is zero or odd or even.
+Num=int(input("Enter the Number")):
+if(Num==0):
+  print("the entered number is zero")
+ elif(Num%2==0):
+  print("the entered number is even")
+ elif(NUm%2!=0):
+   print("the entered number is odd")
+ else:
+    print("enter the valid integer")
+    
+ 5.Write a program to create a calculator that perform basic arithematic operations.
+ num_1=float(input("Enter the number1"))
+ num_2=float(input("Enter the number2"))
+ print("1.Addition")
+ print("2.substraction")
+ print("3.Multiplication")
+ print("4.Division")
+ choice=int(input("Enter choice"))
+ if(choice==1):
+    print(num_1+num_2)
+ elif(choice==2):
+    print(num_1-num_2)
+ elif(choice==3):
+    print(num_1*num_2)
+ elif(choice==4):
+    print(num_1/num_2)
+ else:
+    print("Enter the valid input")
+ 
+  
+ 
