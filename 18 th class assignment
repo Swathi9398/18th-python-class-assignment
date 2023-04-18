@@ -1,5 +1,78 @@
 1. write a program to print the grade of a student based on the marks obtained. 
+
+marks=int(input("Enter a value"))
+if (marks > 90 and marks<=100):
+    print("A+")
+elif marks >80 and marks<=90 :
+    print("A")
+elif marks >70 and marks <= 80 :
+    print("B")
+elif marks >60 and marks <= 70:
+    print("C")
+elif marks>=35 and marks <= 60 :
+    print("D")
+else:
+    print("E")
+
 2. Write a program to print if the guven year is leap or not.
+
+year=int(input("Enter year "))
+if year % 4 == 0 :
+    if (year % 100 ==0):
+        if(year % 400 ==0):
+            print("Leap year")
+        else :
+            print("Not a leap year")
+    else :
+        print("Leap year")
+else:
+     print("Not a Leap year")
+     
+     
 3. Write a program to print if the given number is zero or odd or even.
+
+num=int(input("Enter a number "))
+if(num == 0):
+    print("Zero")
+elif num %2 ==0 :
+    print("Even")
+else :
+    print("Odd")
+    
+    
 4. Write a program to check the strength of a password.(please provide different rules for the password)
+
+password = input("enter a password ")
+upper = lower = digit = special = 1
+if(len(password) >= 8 ):
+    for i in password :
+        if(i >= 'A' and i<='Z') :
+            upper +=1
+        elif(i >= 'a' and i<='z') :  
+            lower+=1
+        elif(i >= '0' and i<='9') :
+            digit+=1
+        else :
+            special +=1
+    if(upper >=1 and lower>=1 and digit >=1 and special >=1) :
+        print("strong")
+    else :
+        print("Not a Strong password")
+else :
+    print("Not a Strong password")  
+
 5.Write a program to create a calculator that perform basic arithematic operations.
+
+a=int(input("Enter a value "))
+b =int(input("Enter b value "))
+ch = input("Enter any arithemetic operator")
+if(ch == "+"):
+     print("Addition of two num : ", a+b)
+elif(ch == '-'):
+    print("Subtraction of two num : ", a-b)
+elif(ch == '*'):   
+    print("Multiplication of two num : " ,a*b)
+elif(ch == '/'):
+    print("Division of two num : " ,a/b)
+else:
+    print("Modulo Division of two num : ", a%b)
