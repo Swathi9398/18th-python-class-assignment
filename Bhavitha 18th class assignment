@@ -1,0 +1,76 @@
+1. write a program to print the grade of a student based on the marks obtained. 
+
+marks = int(input('Enter the marks: '))
+if (marks>=90 and marks<=100) :
+    print('Grade-A')
+if (marks>=80 and marks<90) :
+    print('Grade-B')
+if (marks>=70 and marks<80) :
+    print('Grade-C')
+if (marks>=60 and marks<70) :
+    print('Grade-D')
+if (marks>=50 and marks<60) :
+    print('Grade-E')
+elif(marks<50):
+    print('Grade-F')
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Write a program to print if the given year is leap or not.
+
+
+year = int(input('Enter the year:'))
+if(year%100==0 and year%400==0) :
+    print("LEAP YEAR")
+if(year%100!=0 and year%4==0) :
+    print("LEAP YEAR")
+else :
+    print("NOT LEAP YEAR")
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Write a program to print if the given number is zero or odd or even.
+
+num = int(input('Enter any number: '))
+if(num==0) :
+    print("ZERO")
+elif(num&1==0) :
+    print("EVEN")
+else:
+    print("ODD")
+    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Write a program to check the strength of a password.(please provide different rules for the password)
+
+l,u,s,d = 0,0,0,0
+password = input("Enter any password: ")
+spl_ch = "_@#$%^&*(){}[]!"
+if(len(password)>=8) :
+    for i in password :
+        if(i.isdigit == True) :
+            d+=1
+        if(i.islower == True) :
+            l+=1
+        if(i.isupper == True) :
+            u+=1
+        if i in spl_ch:
+            s+=1
+if(l>=1 and u>=1 and s>=1 and d>=1 ):
+    print("STRONG PASSWORD")
+else:
+    print("NOT STRONG PASSWORD")
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5.Write a program to create a calculator that perform basic arithematic operations.
+
+num1 = int(input('Enter first number: '))
+num2 = int(input('Enter second number: '))
+operator = input('Enter the operator to perform calcualtion:')
+if(operator=='+') :
+    print(num1+num2)
+if(operator=='-') :
+    print(num1-num2)
+if(operator=='*') :
+    print(num1*num2)
+if(operator=='/') :
+    print(num1/num2)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
