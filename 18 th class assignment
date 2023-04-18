@@ -1,5 +1,69 @@
 1. write a program to print the grade of a student based on the marks obtained. 
+
+
+a=int(input('enter marks'))
+if(a>90 and a<=100):
+    print('A+')
+elif(a>80 and a<=90):
+    print('A')
+elif(a>70 and a<=80):
+    print('B')
+elif(a>60 and a<=70):
+    print('C')
+elif(a>50 and a<=60):
+    print('D')
+else:
+    print('fail')
+    
 2. Write a program to print if the guven year is leap or not.
+
+
+a=int(input('enter year'))
+if((a%400==0) or (a%100!=0) and (a%4==0)):
+    print('leap year')
+else:
+    print('not a leap year')
+
 3. Write a program to print if the given number is zero or odd or even.
+
+a=int(input('enter a num'))
+if(a%2==0 and a!=0):
+    print('even')
+elif(a%2!=0):
+    print('odd')
+else:
+    print('zero')
+    
 4. Write a program to check the strength of a password.(please provide different rules for the password)
+
+
+password=input('enter password')
+lowercase="abcdefghijklmnopqrstuvwxyz"
+uppercase=lowercase.upper()
+digits="0123456789"
+symbols="!@#$%^&*()_+-={}[]<>?::"
+if(len(password)<8):
+    print('not suuficient')
+elif not any(char in lowercase for char in password):
+    print("need lowercase")
+elif not any(char in uppercase for char in password):
+    print("need upper case")
+elif not any(char in digits for char in password):
+    print("need digits")
+elif not any(char in symbols for char in password):
+    print("need symbols")
+else:
+    print("password is strong")
+    
+
 5.Write a program to create a calculator that perform basic arithematic operations.
+
+
+a=int(input('enter a number'))
+b=int(input('enter sec num'))
+print(a+b)
+print(a-b)
+print(a*b)
+print(a/b)
+print(a%b)
+
