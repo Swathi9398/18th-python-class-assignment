@@ -1,5 +1,72 @@
 1. write a program to print the grade of a student based on the marks obtained. 
+
+
+num = int(input("Enter Number of Marks"))
+if (num > 100):
+    print("Wrong Input Enter between 0 and 100")
+elif num > 90:
+    print("A Grade")
+elif num > 80 and num < 91:
+    print("B Grade")
+elif num > 70 and num < 81:
+    print("C Grade")
+elif num > 60 and num < 71:
+    print("D Grade")
+elif num > 50 and num < 61:
+    print("E Grade")
+else:
+    print("Fail")
+
+
 2. Write a program to print if the guven year is leap or not.
+
+
+year = int(input("Enter year"))
+if ((year % 4 == 0) and (year % 100 != 0)) or (year % 400 == 0):
+    print("Leap Year")
+else:
+    print("Not Leap Year")
+    
+
 3. Write a program to print if the given number is zero or odd or even.
+
+num=int(input())
+if num==0:
+    print("0")
+elif num%2==0:
+    print("even")
+else:
+    print("odd")
+    
+    
 4. Write a program to check the strength of a password.(please provide different rules for the password)
+
+
+password=input("Enter Password :")
+c1=c2=c3=c4=0
+for i in password:
+    if i.isupper():
+        c1+=1
+    elif i.islower():
+        c2+=1
+    elif i.isnumeric():
+        c3+=1
+    else:
+        c4+=1
+if c1!=0 and c2!=0 and c3!=0 and c4!=0 and len(password)>=8:
+    print("Strong")
+elif c1!=0 and c2!=0 and (c3!=0 or c4!=0) and len(password)>=6:
+    print("Moderate")
+else:
+    print("Weak")
+
+
 5.Write a program to create a calculator that perform basic arithematic operations.
+
+num1=int(input("Enter number 1 :"))
+num2=int(input("Enter number 2 :"))
+print("Sum :",num1+num2)
+print("Difference :",num1-num2)
+print("Multiplication :",num1*num2)
+print("Division :",num1/num2)
+print("Modulo :",num1%num2)
