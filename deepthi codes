@@ -1,0 +1,77 @@
+#print grade based on marks
+a=int(input("enter the marks of the student"))
+if a>=90:
+    print("grade:A+")
+elif a>=80 and a<90:
+    print("grade:A")
+elif a>=70 and a<80:
+    print("grade:B+")
+elif a>=60 and a<70:
+    print("grade:B")
+elif a>=50 and a<60:
+    print("grade:c+")
+elif a>=35 and a<50:
+    print("grade:c")
+else:
+    print("fail")
+
+
+#print whether the year is leap year or not
+a=int(input("enter the year:"))
+if a%4==0:
+    print(a,"is leap year")
+else:
+    print(a,"is not leap year")
+ 
+ 
+ #print whether the number is zero or odd or even
+ a=int(input("enter the number"))
+ if a==0:
+     print("the number is zero")
+ else:
+     if a%2==0:
+         print("the number is even")
+     else:
+         print("the number is odd")
+
+
+#To check the strength of the password
+a=input("enter the  password")
+lc=uc=d=sc=0
+for i in a:
+    if i.islower():
+        lc=lc+1
+    if i.isupper():
+        uc=uc+1
+    if i.isdigit():
+        d=d+1
+    if i=='@'or'_'or'$':
+        sc=sc+1
+if (lc>=1 and uc>=1 and d>=1 and sc>=1 and len(a)>=8 and len(a)>=8):
+    print("valid")
+else:    
+    print('invalid')
+
+            
+#calculator operations
+print("the list of operations are :")
+print("1.addition")
+print("2.subtraction")
+print("3.multiplication")
+print("4.division")
+a=int(input("enter your option : "))
+if a in (1,2,3,4):
+    b=float(input("enter the first value:"))
+    c=float(input("enter the second value:"))
+    if a==1:
+        print(b,"+",c,"=",b+c)
+    elif a==2:
+        print(b,"-",c,"=",b-c)
+    elif a==3:
+         print(b,"*",c,"=",b*c)
+    elif a==4:
+         print(b,"/",c,"=",b/c)
+else:
+    print("invalid option")
+            
+        
