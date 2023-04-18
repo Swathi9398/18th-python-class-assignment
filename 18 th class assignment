@@ -31,3 +31,14 @@ elif ((year%4 == 0) and (year%100 != 0)):
     print("{0} is a leep year".format(year))
 else:
     print("{0} is not a leep year".format(year))
+
+
+# 3Answer
+
+num = int(input("Enter number: "))
+if num == 0:
+    print("Given number is Zero")
+elif num%2 ==  0:
+    print("Given numer is Even")
+else:
+    print("Given numer is Odd")
