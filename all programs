@@ -1,0 +1,95 @@
+#1.program to check grade
+marks=int(input("Enter marks obtained by student:"))
+if marks>=95:
+    grade='O'
+elif marks>=85:
+    grade='A'
+elif marks>=75:
+    grade='B'
+elif marks>=65:
+    grade='C'
+elif marks>=55:
+    grade='D'
+else:
+    grade='F'
+print("Student grade is: "+grade)
+
+
+
+#2.program to check leap year
+year=int(input("Enter year:"))
+#first we need to check year is a centuary year or not 
+if year%400==0:
+    print("it is a leap year")
+#if year is not divisible by 400 and divisible for 100 is not leap year ex:1990
+elif year%100==0:
+    print("it is not a leap year")
+#if year is not a centuary year then if year is divisible by 4 it is a leap year ex:2004
+elif year%4==0:
+    print("it is a leap year")
+else:
+    print("it is not a leap year")
+
+
+
+
+#3.program to check what no. it is
+number=int(input("Enter a number:"))
+if number==0:
+    print("number is Zero")
+elif number%2==0:
+    print("number is Even")
+elif number%2!=0:
+    print("number is Odd")
+
+
+
+
+#4.password strength checking
+password=input("Enter password That Should contain len 8 and capital letter and small letter and can contain special characters like(@,#,$,&):")
+length=len(password)
+hasCapital=False
+hasSmall=False
+hasSpecialChar=False
+for i in password:
+    if i>='A' and i<='Z':
+        hasCapital=True
+    if i>='a' and i<='z':
+        hasSmall=True
+    if ('@' in password) or ('#' in password) or ('$' in password) or ('&' in password):
+        hasSpecialChar=True
+#checking password
+if length>=8 and (hasCapital==True) and (hasSmall==True) and (hasSpecialChar==True):
+    print("password is Strong")
+else:
+    print("password is weak")
+
+
+
+
+#5.calculator application
+#program to perform arithmetic operations
+a=int(input("Enter a value:"))
+b=int(input("Enter b value:"))
+print("Enter '+' for addition, '-' for subtraction, '*' for multiplication, '/' for division, '%' for division")
+option=input("Enter which operation to perform:")
+if option=='+':
+    ans=a+b
+    ans=str(ans)
+    print("Addition of two numbers is "+ans)
+elif option=='-':
+    ans=a-b
+    ans=str(ans)
+    print("Subtraction of two numbers is "+ans)
+elif option=='*':
+    ans=a*b
+    ans=str(ans)
+    print("Multiplication of two numbers is "+ans)
+elif option=='/':
+    ans=a/b
+    ans=str(ans)
+    print("Division of two numbers is "+ans)
+elif option=='%':
+    ans=a%b
+    ans=str(ans)
+    print("Modulo or remainder of two numbers is "+ans)
