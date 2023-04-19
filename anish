@@ -50,32 +50,57 @@ else:
 	
 
 #4. Write a program to check the strength of a password.(please provide different rules for the password)
+
+import re
 print("Your Password is Strong, only if it contains minimum of 8 characters and atleast one lower and uppercase letter and atleast one special symbol")
 pswrd = input("Enter Your Password : ")
-if(len(pswrd) < 8):
-	print("Please Enter a Valid Password")
+pswrd = input("Enter Password")
+
+def upper(pswrd):
+	matcher = re.finditer("[A-Z]",pswrd)
+	for match in matcher:
+		return True
+	else:
+		return False
+
+def lower(pswrd):
+	matcher = re.finditer("[a-z]",pswrd)
+	for match in matcher:
+		return True
+	else:
+		return False
+
+def digit(pswrd):
+	matcher = re.finditer("[0-9]",pswrd)
+	for match in matcher:
+		return True
+	else:
+		return False
+
+def splcr(pswrd):
+	matcher = re.finditer("[^a-z0-9A-Z]",pswrd)
+	for match in matcher:
+		return True
+	else:
+		return False
+
+
+if(len(pswrd)<8):
+	print("Enter a valid password")
 else:
-	lwr = False
-	upr = False
-	dgt = False
-	spclcr = False
-	alpha = "abcdefghijklmnopqrstuvwxyz"
-	for i in range(pswrd):
-		if pswrd[i].islower():
-			lwr = True
-		if pswrd[i].isupper():
-			upr = True
-		if pswrd[i].isdigit():
-			dgt = True
-		if pswrd[i] not in alpha:
-			spclcr = True
-	if (lwr and upr and dgt and spclcr):
-          print("Strong")
-      elif ((lwr or upr) and spclcr):
-          print("Moderate")
-      else:
-          print("Weak")
-		
+	if(upper(pswrd)):
+		if(lower(pswrd)):
+			if(digit(pswrd)):
+				if(splcr(pswrd)):
+					print("Your Password is Strong")
+				else:
+					print("Your Password is Moderate, it needs atleast one special character")
+			else:
+				print("Your Password is Moderate, it needs atleast one digit")
+		else:
+			print("Your Password is Weak, it needs atleast one lower case alphabet")
+	else:
+		print("Your Password is Weak, it needs atleast one upper case alphabet")		
 		
 
 #5.Write a program to create a calculator that perform basic arithematic operations.
