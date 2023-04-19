@@ -1,5 +1,91 @@
-1. write a program to print the grade of a student based on the marks obtained. 
+1. write a program to print the grade of a student based on the marks obtained.
+------------------------------------------
+m = int(input("Enter a number"))
+if m >= 90:
+  print("Grade A");
+elif m < 90 and m >= 80:
+  print("Grade B");
+elif m < 80 and m >= 60:
+  print("Grade C");
+elif m < 60 and m >= 40:
+  print("Grade D");
+-----------------------------------------
+
+
+
 2. Write a program to print if the guven year is leap or not.
+-----------------------------------------
+a = int(input("Enter a number"))
+if (a%4 == 0 and a%100 != 0 or a%400 == 0):
+    print("Year is leap year");
+else:
+    print("Year is not leap year"));
+------------------------------------------
+
+
+
 3. Write a program to print if the given number is zero or odd or even.
+
+------------------------------------------
+num = int(input("enter a number"))
+if num ==0:
+    print("Zero");
+elif num % 2 == 0:
+    print("Even");
+else:
+    print("Odd");
+------------------------------------------
+
+
+
+
 4. Write a program to check the strength of a password.(please provide different rules for the password)
+------------------------------------------
+lower,upper,sp, digit = 0,0,0,0
+pwd = input("Enter password:")
+
+if len(pwd) >= 8;
+    for i in pwd:
+        if i.islower():
+            lower +=1
+        if i.isupper():
+            upper +=1
+        if i.isdigit();
+            digit +=1
+        if i == '@' or i == '$' or i == '_';
+            sp += 1
+ if (lower >= 1 and upper >= 1 and sp>= 1 and digit >= 1 and lower+upper+sp+digit == len(pwd)):
+    print("Valid password");
+ else:
+    print("password is not valid");
+-------------------------------------------------
+
+
+
+
 5.Write a program to create a calculator that perform basic arithematic operations.
+------------------------------------------------
+def add(a,b):
+    return a+b
+def add(a,b):
+    return a-b
+def add(a,b):
+    return a*b
+def add(a,b):
+    return a/b
+    
+n1 = int(input("Enter a number: "))
+n2 = int(input("Enter a number: "))
+ch = input("enter choice (a-add / b-subtract / c-multiplication / d-division:")
+
+if ch == 'a':
+  print(n1 , '+' , n2 , '=' ,add(a,b));
+elif ch == 'a':
+  print(n1 , '-' , n2 , '=' ,sub(a,b));
+elif ch == 'a':
+  print(n1 , '*' , n2 , '=' ,mul(a,b));
+elif ch == 'a':
+  print(n1 , '/' , n2 , '=' ,div(a,b));
+else:
+  print("invalid choice");
+----------------------------------------------
