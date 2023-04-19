@@ -1,5 +1,113 @@
 1. write a program to print the grade of a student based on the marks obtained. 
-2. Write a program to print if the guven year is leap or not.
+
+marks = float(input("Enter your marks in Computer Science: "))
+
+if marks > 90:
+    print("Grade: O")
+elif marks >= 80 and marks < 90:
+    print("Grade: A+")
+elif marks >= 70 and marks < 80:
+    print("Grade: A")
+elif marks >= 60 and marks < 70:
+    print("Grade: B+")
+elif marks >= 50 and marks < 60:
+    print("Grade: B")
+elif marks >= 40 and marks < 50:
+    print("Grade: C")
+else:
+    print("Grade: F")
+	
+	2. Write a program to print if the guven year is leap or not.
+	
+	def CheckLeap(Year):  
+  
+  if((Year % 400 == 0) or  
+     (Year % 100 != 0) and  
+     (Year % 4 == 0)):   
+    print("Given Year is a leap Year");  
+
+  else:  
+    print ("Given Year is not a leap Year")  
+
+Year = int(input("Enter the number: "))  
+
+CheckLeap(Year)  
+
 3. Write a program to print if the given number is zero or odd or even.
-4. Write a program to check the strength of a password.(please provide different rules for the password)
+
+num = int(input("Enter a number: "))  
+if (num % 2) == 0:  
+   print("{0} is Even number".format(num))  
+else:  
+   print("{0} is Odd number".format(num))  
+   
+   
+   
+   4. Write a program to check the strength of a password.(please provide different rules for the password)
+   import re
+password = "R@m@_f0rtu9e$"
+flag = 0
+while True:
+    if (len(password)<=8):
+        flag = -1
+        break
+    elif not re.search("[a-z]", password):
+        flag = -1
+        break
+    elif not re.search("[A-Z]", password):
+        flag = -1
+        break
+    elif not re.search("[0-9]", password):
+        flag = -1
+        break
+    elif not re.search("[_@$]" , password):
+        flag = -1
+        break
+    elif re.search("\s" , password):
+        flag = -1
+        break
+    else:
+        flag = 0
+        print("Valid Password")
+        break
+ 
+if flag == -1:
+    print("Not a Valid Password ")
+	
 5.Write a program to create a calculator that perform basic arithematic operations.
+
+def add(P, Q):    
+      
+   return P + Q   
+def subtract(P, Q):   
+      
+   return P - Q   
+def multiply(P, Q):   
+     
+   return P * Q   
+def divide(P, Q):   
+       
+   return P / Q      
+print ("Please select the operation.")    
+print ("a. Add")    
+print ("b. Subtract")    
+print ("c. Multiply")    
+print ("d. Divide")    
+    
+choice = input("Please enter choice (a/ b/ c/ d): ")    
+    
+num_1 = int (input ("Please enter the first number: "))    
+num_2 = int (input ("Please enter the second number: "))    
+    
+if choice == 'a':    
+   print (num_1, " + ", num_2, " = ", add(num_1, num_2))    
+    
+elif choice == 'b':    
+   print (num_1, " - ", num_2, " = ", subtract(num_1, num_2))    
+    
+elif choice == 'c':    
+   print (num1, " * ", num2, " = ", multiply(num1, num2))    
+elif choice == 'd':    
+   print (num_1, " / ", num_2, " = ", divide(num_1, num_2))    
+else:    
+   print ("This is an invalid input")    
