@@ -1,5 +1,69 @@
 1. write a program to print the grade of a student based on the marks obtained. 
+a=int(input("enter the marks :"));
+if a<=100 and a>=91:
+    print("Grade is O");
+elif a<=90 and a>=81:
+    print("Grade is A");
+elif a<=80 and a>=71:
+    print("Grade is B");
+elif a<=70 and a>=61:
+    print("Grade is C");
+elif a<=60 and a>=51:
+    print("Grade is D");
+elif a<=50 and a>=40:
+    print("Grade is E");
+ else :
+    print("failed in exam");
+    
 2. Write a program to print if the guven year is leap or not.
+  year=int(input("enter the year:");
+  if (year%400==0 and year%100==0):
+      print("%d is leap year"%(year));
+  elif(year%4==0 and year%100!=0):
+      print("%d is leap year"%(year));
+  else:
+      print("%d is not leap year"%(year));
+  
 3. Write a program to print if the given number is zero or odd or even.
+   a=int(input("enter a number:");
+   if(a==0):
+      print("%d is zero"%(a));
+   elif(a%2==0):
+      print("%d is even"%(a));
+   else:
+      print("%d is odd"%(a));
+      
 4. Write a program to check the strength of a password.(please provide different rules for the password)
+lower,upper,number,special=0,0,0,0;
+password=input("enter the password: ");
+if (len(password)>=8):
+    for i in password:
+        if(i.islower()):
+            lower+=1;
+        elif(i.isupper()):
+            upper+=1;
+        elif(i.isdigit()):
+            number+=1;
+        elif(i=='@' or i=='$' or i=='_' or i=='#'):
+            special+=1;
+ if(lower>=1 and upper>=1 and number>=1 and special>=1):
+    print("Valid password");
+ else:
+    print("Invalid password");
+    
 5.Write a program to create a calculator that perform basic arithematic operations.
+  a=int(input("enter first number:");
+  b=int(input("enter second number:");
+  operator=input("enter operator:");
+  if(operator == '+'):
+      print(a+b);
+  elif(operator == '-'):
+      print(a-b);
+  elif(operator == '*'):
+      print(a*b);
+  elif(operator == '/'):
+      print(a/b);
+  elif(operator == '%'):
+      print(a%b);
+  else :
+      print("invalid opeartor");
