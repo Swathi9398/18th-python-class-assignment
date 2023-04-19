@@ -3,3 +3,118 @@
 3. Write a program to print if the given number is zero or odd or even.
 4. Write a program to check the strength of a password.(please provide different rules for the password)
 5.Write a program to create a calculator that perform basic arithematic operations.
+
+
+
+"""
+
+        1.        Code for printing the grade of a student based on the marks obtained.
+
+"""
+marks=int(input("Enter the marks of the student : "))
+if marks >= 90 and marks <= 100:                     # Exceptional Grade Condition
+      print("A Grade")
+elif marks >= 80 and marks < 90:                     # Excellent Grade Condition
+      print("B Grade")
+elif marks >= 70 and marks < 80:                     # Good Grade Condition
+      print("C Grade")
+elif marks >= 60 and marks < 70:                     # Satisfactory Grade Condition
+      print("D Grade")
+elif marks >= 50 and marks < 60:                     # Barely Passed Grade Condition
+      print("E Grade")
+else:                                                # Fail Grade Condition
+      print("F Grade")
+      
+      
+      
+      
+"""
+
+      2.         Code for printing whether the given year is leap or not
+
+"""
+
+year=int(input("Enter the Year to check, if it is Leap year or not : "))
+if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
+    print(year,"is a Leap Year")
+else:
+    print(year,"is not a Leap Year")
+
+
+
+
+
+"""
+
+      3.         Code for printing whether a given number is Zero or Odd or Even
+
+"""
+
+number=int(input("Enter the value of number : "))
+if number:
+    if number % 2:
+        print("Given number is Odd")
+    else:
+        print("Given number is Even")
+else:
+    print("Given number is Zero")
+
+
+
+
+
+"""
+
+       4.        Code for printing whether the given Password is Strong or Weak
+
+"""
+
+""" Rules:
+1.The length of the code must be strictly greater than 7 characters or else it is considered as weak password.
+2.The Strength of the code raises if it consists of Lower and Upper Alphabets along with numericals.
+"""
+
+
+passcode=input("Enter the Password to check it's strength : ")
+count_num=0
+count_low=0
+count_upp=0
+count_length=0
+
+length=len(passcode)
+if length < 7:
+    count_length=1
+
+for i in range(length):
+    if ( passcode[i].isdigit() ):
+        count_num=1
+    if ( passcode[i].islower() ):
+        count_low=1
+    if ( passcode[i].isupper() ):
+        count_upp=1
+
+count = count_num + count_low + count_upp;
+if ( ( count == 1 or count_length == 1 ) ):
+    print("Strength of the Password is Weak")
+elif count == 2:
+    print("Strength of the Password is Medium")
+else:
+    print("Strength of the Password is Strong")
+
+
+
+
+
+"""
+
+     5.       Code for the calculator that performs the basic arithemetic operations like +, -, *, /, **
+
+"""
+
+a=int(input("enter the first number"))
+b=int(input("enter the second number"))
+print("a+b=",a+b)
+print("a-b=",a-b)
+print("a*b=",a*b)
+print("a/b=",a/b)
+print("a**b=",a**b)
