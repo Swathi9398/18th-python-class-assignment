@@ -1,0 +1,68 @@
+1.  grade
+marks=int(input("Enter the marks:"))
+if(marks>=90 and marks<100):
+  print("A")
+if(marks>=80 and marks<90):
+  print("B") 
+if(marks>=70 and marks<80):
+  print("C")
+if(marks>=60 and marks<70):
+  print("D")
+if(marks>=50 and marks<60):
+  print("E")
+elif(marks<50):
+  print("FAIL")
+  
+  2.  leap year or not
+year=int(input("Enter the year:"))
+if(year%100==0 and year%400 ==0):
+    print("Leap year")
+if(year%100!=0 and year%4==0):
+    print("Leap year")
+else:
+    print("not leap year")
+
+3. Evem odd
+
+num=int(input("Enter the number"))
+if(num==0): 
+    print("zero")
+elif(num%2==0):
+    print("even")
+else:
+    print("odd")
+    
+ 4.strong password r not 
+    
+l,u,s,d=0,0,0,0
+password =input("Enter any password:")
+spl_ch="_@#$%^&{}()[]!"
+if(len(password)>=8):
+    for i in password:
+        if(i.isdigit == True):
+            d+=1
+        if(i.lower == True):
+            l+=1
+        if(i.upper == True):
+            u+=1
+        if i in spl_ch:
+            s+=1
+if(l>=1 and u>=1 and s>=1 and d>=1):
+    print("Strong password")
+    
+ 5.  arthematic operation
+ num1=int(input("Enter the first number"))
+num2=int(input("Enter the second number"))
+operator=input("Enterr the operator to perform the calculation")
+if(operator =='+'):
+   print(num1+num2)
+if(operator =='-'):
+   print(num1-num2)
+if(operator =='*'):
+   print(num1*num2)
+if(operator =='/'):
+   print(num1/num2)
+if(operator =='%'):
+   print(num1%num2)
+else:
+    print("not strong password")
