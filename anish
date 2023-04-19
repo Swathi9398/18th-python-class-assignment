@@ -54,7 +54,6 @@ else:
 import re
 print("Your Password is Strong, only if it contains minimum of 8 characters and atleast one lower and uppercase letter and atleast one special symbol")
 pswrd = input("Enter Your Password : ")
-pswrd = input("Enter Password")
 
 def upper(pswrd):
 	matcher = re.finditer("[A-Z]",pswrd)
