@@ -1,0 +1,50 @@
+1. write a program to print the grade of a student based on the marks obtained. 
+def get_grade(Score):
+  switch(Score):
+    case Score>=90:
+      return'A'
+    case Score>=80 and Score<90:
+      return'B'
+    case Score>=70 and Score<80:
+      return'C';
+    case Score>=60 and Score<70:
+      return'D'
+    case Score<60
+      return'e'
+Score=int(input(''Enter the Score:))
+get_grade(Score)
+****************************************************************
+2. Write a program to print if the guven year is leap or not.
+*********************************************************************************
+def Checking_leap_year(Year_to_check):
+  if((year%400=0)or(year%100!=0)and(year%4==0)):
+    print('Given year is a leap_year')
+  else
+    print('Given year is not a leap_year')
+Year_to_check=int(input('Enter the year to check'))
+Checking_leap_year(Year_to_check)
+*********************************************************************************
+  3. Write a program to print if the given number is zero or odd or even.
+ ********************************************************************************
+ num=int(input('Enter the number to check even or odd'))
+ if(num%2==0):
+  Print('The given number is even')
+ else:
+  Print('The given nuber is odd')
+***********************************************************************************
+
+**************************************************************************************
+5.Write a program to create a calculator that perform basic arithematic operations.
+************************************************************************************************
+a=5,b=8
+sum=a+b //addition
+sub=a-b//subtraction
+multiplication=a*b //multiplication
+division=a/b //division
+mod_div=a%b //modulodivison
+print(sum)
+print(sub)
+print(multiplication)
+print(division)
+print(mod_div)
+*********************************************************************************************
