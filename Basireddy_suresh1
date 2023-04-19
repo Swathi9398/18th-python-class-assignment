@@ -1,12 +1,12 @@
 1. write a program to print the grade of a student based on the marks obtained. 
 Marks=eval(input())
-if Marks>=90 AND Marks<=100:
+if Marks>=90 and Marks<=100:
   print("Grade A")
-elif Marks<90 AND Marks>=80:
+elif Marks<90 and Marks>=80:
   print("Grade B")
-elif Marks<80 AND Marks>=70:
+elif Marks<80 and Marks>=70:
   print("Grade C")
-elif Marks<70 AND Marks>=40:
+elif Marks<70 and Marks>=40:
   print("Grade D")
 else:
   print("Fail")
