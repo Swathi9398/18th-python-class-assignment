@@ -1,0 +1,79 @@
+1)
+marks=int(input("Enter the marks less than or equal to 100:"))
+if marks>90:
+    print("A+")
+elif marks>80:
+    print("A")
+elif marks>70:
+    print("B+")
+elif marks>60:
+    print("B")
+elif marks>50:
+    print("C+")
+elif marks>40:
+    print('c')
+else:
+    print('Fail')
+
+2)
+year=int(input("Enter a year:"))
+if(year%400==0) or (year%4==0 and year%100!=0):
+    print(year,"is a leap year")
+else:
+    print(year,"is not a leap year")
+
+3)
+num=int(input("Enter a number:"))
+if num==0:
+    print("zero")
+elif(num%2==0):
+    print(num,"is a even number")
+else:
+    print(num,"is a odd number")
+
+4)
+password=input("Enter a password:")
+lower=0
+upper=0
+digit=0
+spe_char=0
+if len(password)>=10:
+    for let in password:
+        if let.islower():
+            lower+=1
+        if let.isupper():
+            upper+=1
+        if let.isdigit():
+            digit+=1
+        if('@'or'#'or'$'or'%'or'&'or'!'):
+            spe_char+=1
+    if(lower>=1 and upper>=1 and digit>=1 and spe_char>=1):
+        print("strong password")
+    else:
+        print("weak password")
+else:
+    print("weak password")
+
+
+5)
+num_1=int(input("Enter first number"))
+num_2=int(input("Enter second number"))
+operator=input("Enter the Arithmetic operator:")
+if operator== "+":
+    print("The sum of",num_1,"and",num_2,"is:",num_1+num_2)
+if operator== "-":
+    print("The difference of",num_1,"and",num_2,"is:",num_1-num_2)
+if operator== "*":
+    print("The product of",num_1,"and",num_2,"is:",num_1*num_2)
+if operator== "/":
+    print("The quotient of",num_1,"and",num_2,"is:",num_1//num_2)
+if operator== "%":
+    print("The remainder of",num_1,"and",num_2,"is:",num_1%num_2)
+    
+    
+  
+
+
+
+
+
